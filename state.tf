@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "tfstates-demo"
+    bucket = "tfstaterobo"
     key    = "nonprod/ec2/terraform.tfstate"
     region = "us-west-2"
     dynamodb_table = "terraform-locking"
@@ -12,7 +12,7 @@ terraform {
 data "terraform_remote_state" "VPC" {
   backend = "s3"
   config = {
-    bucket = "tfstates-demo"
+    bucket = "tfstaterobo"
     key    = "nonprod/vpc/terraform.tfstate"
     region = "us-west-2"
   }
