@@ -5,3 +5,4 @@ module "ec2" {
   VPC_ID          = data.terraform_remote_state.VPC.outputs.VPC_ID
   MGMT_VPC_ID     = data.terraform_remote_state.VPC.outputs.MGMT_VPC_ID
 }
+
