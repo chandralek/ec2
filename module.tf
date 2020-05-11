@@ -6,5 +6,9 @@ module "user" {
   MGMT_VPC_ID     = data.terraform_remote_state.VPC.outputs.MGMT_VPC_ID
   INSTANCE_TYPE   = var.INSTANCE_TYPE
   TAGS            = var.TAGS
+  GIT_USR         = var.GIT_USR
+  GIT_PSW         = var.GIT_PSW
+  SSH_USR         = var.SSH_USR
+  SSH_PSW         = var.SSH_PSW
 }
 

@@ -3,6 +3,11 @@ pipeline{
     label 'SLAVE'
   }
 
+  environment{
+    TF_VAR_SSH = credentials('SSH_ROOT')
+    TF_VAR_GIT = credentials('GitUserPass')
+  }
+
   stages{
     stage('Terramform init')
             {
