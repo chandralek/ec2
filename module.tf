@@ -10,5 +10,7 @@ module "user" {
   GIT_PSW         = var.GIT_PSW
   SSH_USR         = var.SSH_USR
   SSH_PSW         = var.SSH_PSW
+  PORTS           = var.PORTS
+  APPLICATION_NAME= "user"
 }
 
