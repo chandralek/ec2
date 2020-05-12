@@ -1,4 +1,4 @@
-module "user" {
+module "application-service" {
   source          = "git::https://chandralekha882:Opcqa123!@github.com/chandralek/modules.git//user"
   PUBLIC_SUBNETS  = data.terraform_remote_state.VPC.outputs.PUBLIC_SUBNETS
   PRIVATE_SUBNETS = data.terraform_remote_state.VPC.outputs.PRIVATE_SUBNETS
