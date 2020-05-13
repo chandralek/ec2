@@ -1,4 +1,4 @@
-module "user-service" {
+/*module "user-service" {
   source          = "git::https://chandralekha882:Opcqa123!@github.com/chandralek/modules.git//application-service"
   PUBLIC_SUBNETS  = data.terraform_remote_state.VPC.outputs.PUBLIC_SUBNETS
   PRIVATE_SUBNETS = data.terraform_remote_state.VPC.outputs.PRIVATE_SUBNETS
@@ -92,7 +92,7 @@ module "ratings-service" {
   SSH_PSW         = var.SSH_PSW
   PORTS           = var.PORTS
   APPLICATION_NAME= "ratings"
-}
+}*/
 
 module "frontend" {
   source          = "git::https://chandralekha882:Opcqa123!@github.com/chandralek/modules.git//application-service"
