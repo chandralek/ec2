@@ -12,6 +12,8 @@
   SSH_PSW         = var.SSH_PSW
   PORTS           = var.PORTS
   APPLICATION_NAME= "user"
+  HOSTED_ZONE_ID  = data.terraform_remote_state.route53.outputs.HOSTED_ZONE_ID
+  HOSTED_ZONE_NAME=data.terraform_remote_state.route53.outputs.HOSTED_ZONE_NAME
 }
 
 module "catalogue-service" {
@@ -28,6 +30,8 @@ module "catalogue-service" {
   SSH_PSW         = var.SSH_PSW
   PORTS           = var.PORTS
   APPLICATION_NAME= "catalogue"
+  HOSTED_ZONE_ID  = data.terraform_remote_state.route53.outputs.HOSTED_ZONE_ID
+  HOSTED_ZONE_NAME=data.terraform_remote_state.route53.outputs.HOSTED_ZONE_NAME
 }
 
 module "cart-service" {
@@ -44,6 +48,8 @@ module "cart-service" {
   SSH_PSW         = var.SSH_PSW
   PORTS           = var.PORTS
   APPLICATION_NAME= "cart"
+  HOSTED_ZONE_ID  = data.terraform_remote_state.route53.outputs.HOSTED_ZONE_ID
+  HOSTED_ZONE_NAME=data.terraform_remote_state.route53.outputs.HOSTED_ZONE_NAME
 }
 
 module "payment-service" {
@@ -60,6 +66,8 @@ module "payment-service" {
   SSH_PSW         = var.SSH_PSW
   PORTS           = var.PORTS
   APPLICATION_NAME= "payment"
+  HOSTED_ZONE_ID  = data.terraform_remote_state.route53.outputs.HOSTED_ZONE_ID
+  HOSTED_ZONE_NAME=data.terraform_remote_state.route53.outputs.HOSTED_ZONE_NAME
 }
 
 module "dispatch-service" {
@@ -76,6 +84,8 @@ module "dispatch-service" {
   SSH_PSW         = var.SSH_PSW
   PORTS           = var.PORTS
   APPLICATION_NAME= "dispatch"
+  HOSTED_ZONE_ID  = data.terraform_remote_state.route53.outputs.HOSTED_ZONE_ID
+  HOSTED_ZONE_NAME=data.terraform_remote_state.route53.outputs.HOSTED_ZONE_NAME
 }
 
 module "ratings-service" {
@@ -92,6 +102,8 @@ module "ratings-service" {
   SSH_PSW         = var.SSH_PSW
   PORTS           = var.PORTS
   APPLICATION_NAME= "ratings"
+  HOSTED_ZONE_ID  = data.terraform_remote_state.route53.outputs.HOSTED_ZONE_ID
+  HOSTED_ZONE_NAME=data.terraform_remote_state.route53.outputs.HOSTED_ZONE_NAME
 }*/
 
 module "frontend" {
@@ -108,4 +120,6 @@ module "frontend" {
   SSH_PSW         = var.SSH_PSW
   PORTS           = var.PORTS
   APPLICATION_NAME= "frontend"
+  HOSTED_ZONE_ID  = data.terraform_remote_state.route53.outputs.HOSTED_ZONE_ID
+  HOSTED_ZONE_NAME=data.terraform_remote_state.route53.outputs.HOSTED_ZONE_NAME
 }
