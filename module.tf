@@ -1,4 +1,4 @@
-/*module "user-service" {
+module "user-service" {
   source          = "git::https://chandralekha882:Opcqa123!@github.com/chandralek/modules.git//application-service"
   PUBLIC_SUBNETS  = data.terraform_remote_state.VPC.outputs.PUBLIC_SUBNETS
   PRIVATE_SUBNETS = data.terraform_remote_state.VPC.outputs.PRIVATE_SUBNETS
@@ -16,7 +16,7 @@
   HOSTED_ZONE_NAME=data.terraform_remote_state.route53.outputs.HOSTED_ZONE_NAME
 }
 
-module "catalogue-service" {
+/*module "catalogue-service" {
   source          = "git::https://chandralekha882:Opcqa123!@github.com/chandralek/modules.git//application-service"
   PUBLIC_SUBNETS  = data.terraform_remote_state.VPC.outputs.PUBLIC_SUBNETS
   PRIVATE_SUBNETS = data.terraform_remote_state.VPC.outputs.PRIVATE_SUBNETS
