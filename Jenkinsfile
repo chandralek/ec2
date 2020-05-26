@@ -6,7 +6,6 @@ pipeline{
   environment{
     TF_VAR_SSH = credentials('SSH_ROOT')
     TF_VAR_GIT = credentials('GitUserPass')
-    TF_VAR_R   = credentials('RabbitMq')
   }
 
   stages{
