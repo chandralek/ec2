@@ -5,4 +5,6 @@ variable "GIT_PSW"          {}
 variable "SSH_USR"          {}
 variable "SSH_PSW"          {}
 variable "PORTS"            {}
+variable "R_USR" {}
+variable "R_PSW" {}
 

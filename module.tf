@@ -14,6 +14,8 @@ module "user-service" {
   APPLICATION_NAME= "user"
   HOSTED_ZONE_ID  = data.terraform_remote_state.route53.outputs.HOSTED_ZONE_ID
   HOSTED_ZONE_NAME=data.terraform_remote_state.route53.outputs.HOSTED_ZONE_NAME
+  R_USR       = var.R_USR
+  R_PSW       = var.R_PSW
 }
 
 module "catalogue-service" {
@@ -32,6 +34,8 @@ module "catalogue-service" {
   APPLICATION_NAME= "catalogue"
   HOSTED_ZONE_ID  = data.terraform_remote_state.route53.outputs.HOSTED_ZONE_ID
   HOSTED_ZONE_NAME=data.terraform_remote_state.route53.outputs.HOSTED_ZONE_NAME
+  R_USR       = var.R_USR
+  R_PSW       = var.R_PSW
 }
 
 module "cart-service" {
@@ -50,6 +54,8 @@ module "cart-service" {
   APPLICATION_NAME= "cart"
   HOSTED_ZONE_ID  = data.terraform_remote_state.route53.outputs.HOSTED_ZONE_ID
   HOSTED_ZONE_NAME=data.terraform_remote_state.route53.outputs.HOSTED_ZONE_NAME
+  R_USR       = var.R_USR
+  R_PSW       = var.R_PSW
 }
 
 module "payment-service" {
@@ -68,6 +74,8 @@ module "payment-service" {
   APPLICATION_NAME= "payment"
   HOSTED_ZONE_ID  = data.terraform_remote_state.route53.outputs.HOSTED_ZONE_ID
   HOSTED_ZONE_NAME=data.terraform_remote_state.route53.outputs.HOSTED_ZONE_NAME
+  R_USR       = var.R_USR
+  R_PSW       = var.R_PSW
 }
 
 module "dispatch-service" {
@@ -86,6 +94,8 @@ module "dispatch-service" {
   APPLICATION_NAME= "dispatch"
   HOSTED_ZONE_ID  = data.terraform_remote_state.route53.outputs.HOSTED_ZONE_ID
   HOSTED_ZONE_NAME=data.terraform_remote_state.route53.outputs.HOSTED_ZONE_NAME
+  R_USR       = var.R_USR
+  R_PSW       = var.R_PSW
 }
 
 module "shipping-service" {
@@ -104,6 +114,8 @@ module "shipping-service" {
   APPLICATION_NAME= "shipping"
   HOSTED_ZONE_ID  = data.terraform_remote_state.route53.outputs.HOSTED_ZONE_ID
   HOSTED_ZONE_NAME=data.terraform_remote_state.route53.outputs.HOSTED_ZONE_NAME
+  R_USR       = var.R_USR
+  R_PSW       = var.R_PSW
 }
 /*
 module "ratings-service" {
@@ -122,6 +134,8 @@ module "ratings-service" {
   APPLICATION_NAME= "ratings"
   HOSTED_ZONE_ID  = data.terraform_remote_state.route53.outputs.HOSTED_ZONE_ID
   HOSTED_ZONE_NAME=data.terraform_remote_state.route53.outputs.HOSTED_ZONE_NAME
+    R_USR       = var.R_USR
+  R_PSW       = var.R_PSW
 }*/
 
 module "frontend" {
@@ -140,4 +154,6 @@ module "frontend" {
   APPLICATION_NAME= "frontend"
   HOSTED_ZONE_ID  = data.terraform_remote_state.route53.outputs.HOSTED_ZONE_ID
   HOSTED_ZONE_NAME=data.terraform_remote_state.route53.outputs.HOSTED_ZONE_NAME
+  R_USR       = var.R_USR
+  R_PSW       = var.R_PSW
 }
