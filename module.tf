@@ -117,7 +117,7 @@ module "shipping-service" {
   R_USR       = var.R_USR
   R_PSW       = var.R_PSW
 }
-/*
+
 module "ratings-service" {
   source          = "git::https://chandralekha882:Opcqa123!@github.com/chandralek/modules.git//application-service"
   PUBLIC_SUBNETS  = data.terraform_remote_state.VPC.outputs.PUBLIC_SUBNETS
@@ -136,7 +136,7 @@ module "ratings-service" {
   HOSTED_ZONE_NAME=data.terraform_remote_state.route53.outputs.HOSTED_ZONE_NAME
     R_USR       = var.R_USR
   R_PSW       = var.R_PSW
-}*/
+}
 
 module "frontend" {
   source          = "git::https://chandralekha882:Opcqa123!@github.com/chandralek/modules.git//application-service"
