@@ -14,8 +14,10 @@ module "user-service" {
   APPLICATION_NAME= "user"
   HOSTED_ZONE_ID  = data.terraform_remote_state.route53.outputs.HOSTED_ZONE_ID
   HOSTED_ZONE_NAME=data.terraform_remote_state.route53.outputs.HOSTED_ZONE_NAME
-  R_USR       = var.R_USR
-  R_PSW       = var.R_PSW
+  R_USR           = var.R_USR
+  R_PSW           = var.R_PSW
+  API_KEY         = var.API_KEY
+  LICENSE_KEY     = var.LICENSE_KEY
 }
 
 module "catalogue-service" {
@@ -36,6 +38,8 @@ module "catalogue-service" {
   HOSTED_ZONE_NAME=data.terraform_remote_state.route53.outputs.HOSTED_ZONE_NAME
   R_USR       = var.R_USR
   R_PSW       = var.R_PSW
+  API_KEY         = var.API_KEY
+  LICENSE_KEY     = var.LICENSE_KEY
 }
 
 module "cart-service" {
@@ -56,6 +60,8 @@ module "cart-service" {
   HOSTED_ZONE_NAME=data.terraform_remote_state.route53.outputs.HOSTED_ZONE_NAME
   R_USR       = var.R_USR
   R_PSW       = var.R_PSW
+  API_KEY         = var.API_KEY
+  LICENSE_KEY     = var.LICENSE_KEY
 }
 
 module "payment-service" {
@@ -76,6 +82,8 @@ module "payment-service" {
   HOSTED_ZONE_NAME=data.terraform_remote_state.route53.outputs.HOSTED_ZONE_NAME
   R_USR       = var.R_USR
   R_PSW       = var.R_PSW
+  API_KEY         = var.API_KEY
+  LICENSE_KEY     = var.LICENSE_KEY
 }
 
 module "dispatch-service" {
@@ -96,6 +104,8 @@ module "dispatch-service" {
   HOSTED_ZONE_NAME=data.terraform_remote_state.route53.outputs.HOSTED_ZONE_NAME
   R_USR       = var.R_USR
   R_PSW       = var.R_PSW
+  API_KEY         = var.API_KEY
+  LICENSE_KEY     = var.LICENSE_KEY
 }
 
 module "shipping-service" {
@@ -116,6 +126,8 @@ module "shipping-service" {
   HOSTED_ZONE_NAME=data.terraform_remote_state.route53.outputs.HOSTED_ZONE_NAME
   R_USR       = var.R_USR
   R_PSW       = var.R_PSW
+  API_KEY         = var.API_KEY
+  LICENSE_KEY     = var.LICENSE_KEY
 }
 
 module "ratings-service" {
@@ -134,8 +146,10 @@ module "ratings-service" {
   APPLICATION_NAME= "ratings"
   HOSTED_ZONE_ID  = data.terraform_remote_state.route53.outputs.HOSTED_ZONE_ID
   HOSTED_ZONE_NAME=data.terraform_remote_state.route53.outputs.HOSTED_ZONE_NAME
-    R_USR       = var.R_USR
+  R_USR       = var.R_USR
   R_PSW       = var.R_PSW
+  API_KEY         = var.API_KEY
+  LICENSE_KEY     = var.LICENSE_KEY
 }
 
 module "frontend" {
@@ -156,4 +170,6 @@ module "frontend" {
   HOSTED_ZONE_NAME=data.terraform_remote_state.route53.outputs.HOSTED_ZONE_NAME
   R_USR       = var.R_USR
   R_PSW       = var.R_PSW
+  API_KEY         = var.API_KEY
+  LICENSE_KEY     = var.LICENSE_KEY
 }
